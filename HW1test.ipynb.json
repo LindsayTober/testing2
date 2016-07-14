@@ -1,0 +1,107 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "import random\n",
+    "\"\"\"We need to import this module in order for the computer to randomly choose from the given list\"\"\"\n",
+    "count=0\n",
+    "win=0\n",
+    "num_of_hr=0\n",
+    "num_of_hp=0\n",
+    "num_of_hs=0\n",
+    "\"\"\"the above statements initialize our counted variables\"\"\"\n",
+    "\n",
+    "def computer_choice(r,p,s):\n",
+    "    \"\"\"this function tells the computer what to play, depending on the previous input of the user\"\"\"    \n",
+    "    if r>p and r>s:\n",
+    "        computer=\"Paper\"\n",
+    "    elif p>r and p>s:\n",
+    "        computer=\"Scissors\"\n",
+    "    elif s>r and s>p:\n",
+    "        computer=\"Rock\"\n",
+    "    else:\n",
+    "        computer=random.choice([\"Rock\",\"Paper\",\"Scissors\"])\n",
+    "    return computer\n",
+    "\n",
+    "while True:\n",
+    "    \"\"\"Unless the user chooses to quit, this loop will continue to run.\"\"\"\n",
+    "    computer=computer_choice(num_of_hr,num_of_hp,num_of_hs)\n",
+    "    your_turn=raw_input(\"Your turn: \")\n",
+    "\n",
+    "    if your_turn not in [\"Rock\",\"Paper\",\"Scissors\"]:\n",
+    "        if your_turn==\"Quit\":\n",
+    "            break\n",
+    "        else: print \"Please try one of these: Rock, Paper, Scissors\"\n",
+    "    \n",
+    "    elif your_turn==\"Rock\":\n",
+    "        num_of_hr+=1\n",
+    "        if computer==\"Scissors\":\n",
+    "            print \"You win!\"\n",
+    "            win+=1\n",
+    "        elif computer==\"Paper\":\n",
+    "            print \"You lose\"\n",
+    "        elif computer==your_turn:\n",
+    "            print \"Draw\"\n",
+    "    elif your_turn==\"Paper\":\n",
+    "        num_of_hp+=1\n",
+    "        if computer==\"Rock\":\n",
+    "            print \"You win!\"\n",
+    "            win+=1\n",
+    "        elif computer==\"Scissors\":\n",
+    "            print \"You lose\"\n",
+    "        elif computer==your_turn:\n",
+    "            print \"Draw\"\n",
+    "    elif your_turn==\"Scissors\":\n",
+    "        num_of_hs+=1\n",
+    "        if computer==\"Paper\":\n",
+    "            print \"You win!\"\n",
+    "            win+=1\n",
+    "        elif computer==\"Rock\":\n",
+    "            print \"You lose\"\n",
+    "        elif computer==your_turn:\n",
+    "            print \"Draw\"\n",
+    "    \n",
+    "    count+=1\n",
+    "print \"Number of games played:\", count\n",
+    "print \"Number of human wins:\", win\n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [Root]",
+   "language": "python",
+   "name": "Python [Root]"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}
