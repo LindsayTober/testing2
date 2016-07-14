@@ -1,3 +1,16 @@
+"""
+Data Analytics Programming
+HW1
+Rock,Paper, Scissors
+
+Group Members:
+Caroline Nelson
+Billy Yuan
+Kelly Yu
+Lindsay Tober
+"""
+
+
 import random
 """We need to import this module in order for the computer to randomly choose from the given list"""
 count=0
@@ -8,7 +21,7 @@ num_of_hs=0
 """the above statements initialize our counted variables"""
 
 def computer_choice(r,p,s):
-"""this function tells the computer what to play, depending on the previous input of the user"""    
+    """this function tells the computer what to play, depending on the previous input of the user"""    
     if r>p and r>s:
         computer="Paper"
     elif p>r and p>s:
